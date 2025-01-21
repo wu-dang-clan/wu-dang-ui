@@ -13,7 +13,7 @@
 
 ## Releases
 
-[npmjs](https://www.chromatic.com/library?appId=678f958b17cf67137236304d)
+[npmjs](https://www.npmjs.com/package/@wu-dang-clan/wu-dang-ui)
 
 ## Authors
 
