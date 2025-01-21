@@ -15,7 +15,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "scripts.release": "rollup -c && auto shipit"
+    "scripts.release": "rollup -c && auto shipit",
+    "chromatic": "npx chromatic --project-token=chpt_b2b3c869dff2882"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
@@ -77,9 +78,12 @@
   "description": "wu-dang-clan's design system",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wu-dang-clan/wu-dang-ui"
+    "url": "git+https://github.com/wu-dang-clan/wu-dang-ui.git"
   },
-  "author": "wu-dang-clan <woonini606@gmail.com>",
+  "author": {
+    "name": "wu-dang-clan",
+    "email": "woonini606@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wu-dang-clan/wu-dang-ui/issues"

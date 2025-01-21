@@ -1,0 +1,31 @@
+# 워크플로우 이름
+name: "wu-dang-clan Chromatic Publish"
+
+# 워크플로우를 위한 이벤트
+on:
+  push:
+    branches:
+      - main # main 브랜치에 push가 발생했을 때
+
+# 작업 목록
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest # 작업을 실행할 OS
+    steps: # 작업 단계
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

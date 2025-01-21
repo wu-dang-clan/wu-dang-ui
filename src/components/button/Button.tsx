@@ -19,20 +19,20 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const styledClasses = {
-    filled: `bg-${color} text-on_${color}`,
-    tonal: `bg-${color}_container text-on_${color}_container`,
-    outlined: `border border-${color} text-${color}`,
+    filled: `bg-${color} text-on_${color}  rounded-full`,
+    tonal: `bg-${color}_container text-on_${color}_container  rounded-full`,
+    outlined: `border border-${color} text-${color}  rounded-full`,
     text: `text-${color}`,
   }[style || "filled"];
 
   const sizeClasses = {
-    small: "px-4 py-2 text-sm font-medium",
-    medium: "px-4 py-2 text-base font-medium",
-    large: "px-8 py-4 text-xl font-medium",
+    small: "px-6 py-2 text-sm font-medium",
+    medium: "px-6 py-2 text-base font-medium",
+    large: "px-6 py-2 text-xl font-medium",
   }[size || "small"];
 
   return (
-    <button className={`${styledClasses} ${sizeClasses} rounded-xl`} {...props}>
+    <button className={`${styledClasses} ${sizeClasses}`} {...props}>
       {label}
     </button>
   );
