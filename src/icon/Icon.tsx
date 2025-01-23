@@ -2,7 +2,26 @@ import icons from "../shared/assets/icons";
 
 export interface IconProps {
   /** 아이콘 종류 */
-  name: "menu";
+  name:
+    | "accountCircle"
+    | "add"
+    | "arrowBack"
+    | "arrowFoward"
+    | "close"
+    | "delete"
+    | "done"
+    | "edit"
+    | "favorite"
+    | "favoriteBorder"
+    | "home"
+    | "menu"
+    | "notifications"
+    | "search"
+    | "settings"
+    | "share"
+    | "star"
+    | "starBorder"
+    | "thumbUp";
 
   /** 아이콘 색상 */
   color: "primary" | "secondary" | "tertiary";

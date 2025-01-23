@@ -17,10 +17,30 @@ const meta: Meta<typeof Icon> = {
   argTypes: {
     name: {
       control: "select",
-      options: ["menu"],
+      options: [
+        "accountCircle",
+        "add",
+        "arrowBack",
+        "arrowFoward",
+        "close",
+        "delete",
+        "done",
+        "edit",
+        "favorite",
+        "favoriteBorder",
+        "home",
+        "menu",
+        "notifications",
+        "search",
+        "settings",
+        "share",
+        "star",
+        "starBorder",
+        "thumbUp",
+      ],
       description: "아이콘의 종류를 설정합니다",
       table: {
-        defaultValue: { summary: "menu" },
+        defaultValue: { summary: "accountCircle" },
       },
     },
 
@@ -44,7 +64,7 @@ const meta: Meta<typeof Icon> = {
   },
 
   args: {
-    name: "menu",
+    name: "accountCircle",
     color: "primary",
     size: "medium",
   },
@@ -56,7 +76,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Example: Story = {
   args: {
-    name: "menu",
+    name: "accountCircle",
     color: "primary",
     size: "medium",
   },
