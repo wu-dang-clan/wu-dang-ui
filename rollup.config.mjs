@@ -60,7 +60,7 @@ export default [
         extract: false,
       }),
     ],
-    external: ["react", "react-dom", "tailwindcss", "autoprefixer", "postcss"],
+    external: ["react", "react-dom"],
   },
   {
     input: "dist/esm/types/index.d.ts",

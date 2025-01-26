@@ -12,27 +12,61 @@ export interface ButtonProps {
 }
 
 export const Button = ({
-  style,
-  color,
-  size,
+  style = "filled",
+  color = "primary",
+  size = "small",
   label,
   ...props
 }: ButtonProps) => {
-  const styledClasses = {
-    filled: `bg-${color} text-on_${color}  rounded-full`,
-    tonal: `bg-${color}_container text-on_${color}_container  rounded-full`,
-    outlined: `border border-${color} text-${color}  rounded-full`,
-    text: `text-${color}`,
-  }[style || "filled"];
+  // Define all possible styles
+  const baseColors = {
+    primary: "bg-primary text-onPrimary",
+    secondary: "bg-secondary text-onSecondary",
+    tertiary: "bg-tertiary text-onTertiary",
+    error: "bg-error text-on_error",
+  };
+
+  const tonalColors = {
+    primary: "bg-primaryContainer text-onPrimaryContainer",
+    secondary: "bg-secondaryContainer text-onSecondaryContainer",
+    tertiary: "bg-tertiaryContainer text-onTertiaryContainer",
+    error: "bg-errorContainer text-on_errorContainer",
+  };
+
+  const outlinedColors = {
+    primary: "border border-primary text-primary",
+    secondary: "border border-secondary text-secondary",
+    tertiary: "border border-tertiary text-tertiary",
+    error: "border border-error text-error",
+  };
+
+  const textColors = {
+    primary: "text-primary",
+    secondary: "text-secondary",
+    tertiary: "text-tertiary",
+    error: "text-error",
+  };
+
+  // Assign styles based on props
+  const styledClasses =
+    {
+      filled: baseColors[color],
+      tonal: tonalColors[color],
+      outlined: outlinedColors[color],
+      text: textColors[color],
+    }[style] || baseColors["primary"];
 
   const sizeClasses = {
     small: "px-6 py-2 text-sm font-medium",
     medium: "px-6 py-2 text-base font-medium",
     large: "px-6 py-2 text-xl font-medium",
-  }[size || "small"];
+  }[size];
 
   return (
-    <button className={`${styledClasses} ${sizeClasses}`} {...props}>
+    <button
+      className={`${styledClasses} ${sizeClasses} rounded-full `}
+      {...props}
+    >
       {label}
     </button>
   );

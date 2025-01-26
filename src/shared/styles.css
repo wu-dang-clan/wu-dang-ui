@@ -1,3 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* color primary */
+  --color-primary: #65558f;
+  --color-onPrimary: #fff;
+  --color-primaryContainer: #eaddff;
+  --color-onPrimaryContainer: #4f378a;
+  /* color secondary */
+  --color-secondary: #625b71;
+  --color-onSecondary: #fff;
+  --color-secondaryContainer: #e8def8;
+  --color-onSecondaryContainer: #4a4459;
+  /* color tertiary */
+  --color-tertiary: #7d5260;
+  --color-onTertiary: #fff;
+  --color-tertiaryContainer: #ffd8e4;
+  --color-onTertiaryContainer: #633b48;
+  /* color error */
+  --color-error: #b3261e;
+  --color-onError: #fff;
+  --color-errorContainer: #f9dedc;
+  --color-onErrorContainer: #852221;
+  /* color surface */
+  --color-surfaceDim: #ded8e1;
+  --color-surface: #fef7ff;
+  --color-surfaceBright: #fef7ff;
+  /* color surface container */
+  --color-surfContainerLowest: #fff;
+  --color-surfContainerLow: #f7f2fa;
+  --color-surfContainer: #f3edf7;
+  --color-surfContainerHigh: #ece6f0;
+  --color-surfContainerHighest: #e6e0e9;
+  /* color onSurface container */
+  --color-onSurface: #1d1b20;
+  --color-onSurfaceVar: #49454f;
+  --color-outline: #79747e;
+  --color-outlineVar: #cac4d0;
+}
