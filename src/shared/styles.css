@@ -36,4 +36,6 @@
   --color-onSurfaceVar: #49454f;
   --color-outline: #79747e;
   --color-outlineVar: #cac4d0;
+
+  --color-scrim: rgba(0, 0, 0, 0.5);
 }

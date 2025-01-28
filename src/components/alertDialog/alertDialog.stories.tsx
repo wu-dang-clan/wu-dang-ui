@@ -16,11 +16,80 @@ const meta: Meta<typeof AlertDialog> = {
   },
 
   tags: ["autodocs"],
+
+  argTypes: {
+    label: {
+      control: "text",
+      description: "버튼에 표시될 텍스트를 설정합니다",
+      table: {
+        defaultValue: { summary: "Button" },
+      },
+    },
+    title: {
+      control: "text",
+      description: "다이얼로그의 제목을 설정합니다",
+      table: {
+        defaultValue: { summary: "Title" },
+      },
+    },
+    message: {
+      control: "text",
+      description: "다이얼로그의 메시지를 설정합니다",
+      table: {
+        defaultValue: { summary: "Message" },
+      },
+    },
+    color: {
+      control: "select",
+      options: ["primary", "secondary", "tertiary", "error"],
+      description: "다이얼로그의 색상을 설정합니다",
+      table: {
+        defaultValue: { summary: "primary" },
+      },
+    },
+    size: {
+      control: "radio",
+      options: ["small", "medium", "large"],
+      description: "다이얼로그의 크기를 설정합니다",
+      table: {
+        defaultValue: { summary: "medium" },
+      },
+    },
+    onConfirm: {
+      description: "확인 버튼 클릭 시 실행될 함수",
+    },
+    confirmLabel: {
+      control: "text",
+      description: "확인 버튼의 텍스트를 설정합니다",
+      table: {
+        defaultValue: { summary: "Confirm" },
+      },
+    },
+    cancelLabel: {
+      control: "text",
+      description: "취소 버튼의 텍스트를 설정합니다",
+      table: {
+        defaultValue: { summary: "Cancel" },
+      },
+    },
+  },
+
+  args: {
+    onConfirm: fn(),
+  },
 } satisfies Meta<typeof AlertDialog>;
 
 export default meta;
 type Story = StoryObj<typeof AlertDialog>;
 
 export const 기본다이얼로그: Story = {
-  args: {},
+  args: {
+    label: "다이얼로그 열기",
+    title: "타이틀",
+    message: "타이틀 하시겠습니까?",
+    color: "primary",
+    size: "small",
+    confirmLabel: "확인",
+    cancelLabel: "취소",
+  },
 };
