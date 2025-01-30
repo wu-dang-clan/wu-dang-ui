@@ -39,6 +39,14 @@ const meta: Meta<typeof AlertDialog> = {
         defaultValue: { summary: "Message" },
       },
     },
+    style: {
+      control: "select",
+      options: ["filled", "tonal", "outlined", "text"],
+      description: "버튼의 스타일을 설정합니다",
+      table: {
+        defaultValue: { summary: "filled" },
+      },
+    },
     color: {
       control: "select",
       options: ["primary", "secondary", "tertiary", "error"],
@@ -87,6 +95,7 @@ export const 기본다이얼로그: Story = {
     label: "다이얼로그 열기",
     title: "타이틀",
     message: "타이틀 하시겠습니까?",
+    style: "filled",
     color: "primary",
     size: "small",
     confirmLabel: "확인",
