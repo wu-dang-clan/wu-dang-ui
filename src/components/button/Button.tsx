@@ -19,42 +19,44 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   // Define all possible styles
-  const baseColors = {
-    primary: "bg-primary text-onPrimary",
-    secondary: "bg-secondary text-onSecondary",
-    tertiary: "bg-tertiary text-onTertiary",
-    error: "bg-error text-on_error",
+  const filledColors = {
+    primary: "bg-primary text-onPrimary hover:brightness-80",
+    secondary: "bg-secondary text-onSecondary hover:brightness-80",
+    tertiary: "bg-tertiary text-onTertiary hover:brightness-80",
+    error: "bg-error text-on_error hover:brightness-80",
   };
 
   const tonalColors = {
-    primary: "bg-primaryContainer text-onPrimaryContainer",
-    secondary: "bg-secondaryContainer text-onSecondaryContainer",
-    tertiary: "bg-tertiaryContainer text-onTertiaryContainer",
-    error: "bg-errorContainer text-on_errorContainer",
+    primary: "bg-primaryContainer text-onPrimaryContainer hover:brightness-80",
+    secondary:
+      "bg-secondaryContainer text-onSecondaryContainer hover:brightness-80",
+    tertiary:
+      "bg-tertiaryContainer text-onTertiaryContainer hover:brightness-80",
+    error: "bg-errorContainer text-on_errorContainer hover:brightness-80",
   };
 
   const outlinedColors = {
-    primary: "border border-primary text-primary",
-    secondary: "border border-secondary text-secondary",
-    tertiary: "border border-tertiary text-tertiary",
-    error: "border border-error text-error",
+    primary: "border border-primary text-primary hover:brightness-80",
+    secondary: "border border-secondary text-secondary hover:brightness-80",
+    tertiary: "border border-tertiary text-tertiary hover:brightness-80",
+    error: "border border-error text-error hover:brightness-80",
   };
 
   const textColors = {
-    primary: "text-primary",
-    secondary: "text-secondary",
-    tertiary: "text-tertiary",
-    error: "text-error",
+    primary: "text-primary hover:brightness-80",
+    secondary: "text-secondary hover:brightness-80",
+    tertiary: "text-tertiary hover:brightness-80",
+    error: "text-error hover:brightness-80",
   };
 
   // Assign styles based on props
   const styledClasses =
     {
-      filled: baseColors[color],
+      filled: filledColors[color],
       tonal: tonalColors[color],
       outlined: outlinedColors[color],
       text: textColors[color],
-    }[style] || baseColors["primary"];
+    }[style] || filledColors["primary"];
 
   const sizeClasses = {
     small: "px-6 py-2 text-sm font-medium",
