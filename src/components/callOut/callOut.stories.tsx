@@ -4,7 +4,7 @@ import { CallOut } from "./CallOut";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof CallOut> = {
-  title: "Components/CallOut",
+  title: "Component/CallOut",
   component: CallOut,
   parameters: {
     docs: {
