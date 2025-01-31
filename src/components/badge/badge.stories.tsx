@@ -62,3 +62,19 @@ export const 뱃지: Story = {
     label: "Badge",
   },
 };
+
+export const tonalBadge: Story = {
+  args: {
+    style: "tonal",
+    color: "primary",
+    label: "Badge",
+  },
+};
+
+export const outlinedBadge: Story = {
+  args: {
+    style: "outlined",
+    color: "primary",
+    label: "Badge",
+  },
+};
