@@ -77,3 +77,24 @@ export const 기본버튼: Story = {
     label: "기본 버튼",
   },
 };
+
+export const tonal버튼: Story = {
+  args: {
+    style: "tonal",
+    label: "tonal 버튼",
+  },
+};
+
+export const outlined버튼: Story = {
+  args: {
+    style: "outlined",
+    label: "outlined 버튼",
+  },
+};
+
+export const text버튼: Story = {
+  args: {
+    style: "text",
+    label: "text 버튼",
+  },
+};
