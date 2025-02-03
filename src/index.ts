@@ -10,4 +10,5 @@ export * from "./components/button";
 export * from "./components/callOut";
 export * from "./components/checkBox";
 export * from "./components/iconButton";
+export * from "./components/hoverCard";
 export * from "./icon";
