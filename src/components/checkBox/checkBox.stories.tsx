@@ -45,13 +45,7 @@ const meta: Meta<typeof CheckBox> = {
         defaultValue: { summary: "CheckBox" },
       },
     },
-    checked: {
-      control: "boolean",
-      description: "체크박스의 상태를 설정합니다",
-      table: {
-        defaultValue: { summary: false },
-      },
-    },
+
     onChange: {
       description: "체크박스의 상태를 변경하는 이벤트 핸들러",
       action: "changed",
@@ -62,7 +56,6 @@ const meta: Meta<typeof CheckBox> = {
     style: "filled",
     color: "primary",
     label: "CheckBox",
-    checked: false,
     onChange: fn(),
   },
 } satisfies StoryObj<typeof CheckBox>;
@@ -72,6 +65,6 @@ type Story = StoryObj<typeof meta>;
 
 export const 기본체크박스: Story = {
   args: {
-    checked: false,
-  },
+    size: "large"
+  }
 };
