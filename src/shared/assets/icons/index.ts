@@ -9,6 +9,7 @@ import { ReactComponent as Edit } from "./edit.svg";
 import { ReactComponent as Favorite } from "./favorite.svg";
 import { ReactComponent as FavoriteBorder } from "./favorite_border.svg";
 import { ReactComponent as Home } from "./home.svg";
+import { ReactComponent as Info } from "./info.svg";
 import { ReactComponent as Menu } from "./menu.svg";
 import { ReactComponent as Notifications } from "./notifications.svg";
 import { ReactComponent as Search } from "./search.svg";
@@ -30,6 +31,7 @@ export default {
   favorite: Favorite,
   favoriteBorder: FavoriteBorder,
   home: Home,
+  info: Info,
   menu: Menu,
   notifications: Notifications,
   search: Search,

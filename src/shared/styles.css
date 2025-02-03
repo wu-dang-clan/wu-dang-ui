@@ -24,7 +24,7 @@
   /* color surface */
   --color-surfaceDim: #ded8e1;
   --color-surface: #fef7ff;
-  --color-surfaceBright: #fef7ff;
+  --color-surfaceBright: #fff;
   /* color surface container */
   --color-surfContainerLowest: #fff;
   --color-surfContainerLow: #f7f2fa;
@@ -36,4 +36,6 @@
   --color-onSurfaceVar: #49454f;
   --color-outline: #79747e;
   --color-outlineVar: #cac4d0;
+
+  --color-scrim: rgba(0, 0, 0, 0.5);
 }

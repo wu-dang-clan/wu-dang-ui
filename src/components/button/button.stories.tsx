@@ -5,7 +5,7 @@ import { Button } from "./Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
-  title: "Button/Button",
+  title: "Component/Button",
   component: Button,
   parameters: {
     docs: {
@@ -75,5 +75,26 @@ type Story = StoryObj<typeof meta>;
 export const 기본버튼: Story = {
   args: {
     label: "기본 버튼",
+  },
+};
+
+export const tonal버튼: Story = {
+  args: {
+    style: "tonal",
+    label: "tonal 버튼",
+  },
+};
+
+export const outlined버튼: Story = {
+  args: {
+    style: "outlined",
+    label: "outlined 버튼",
+  },
+};
+
+export const text버튼: Story = {
+  args: {
+    style: "text",
+    label: "text 버튼",
   },
 };
